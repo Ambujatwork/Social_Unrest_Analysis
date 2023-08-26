@@ -28,7 +28,7 @@ def run_analysis(Tweets):
         negativity = sentiments.count(-1)/(sentiments.count(1)+sentiments.count(-1))
     except ZeroDivisionError:
         return (0,1)
-    if negativity<0.4:
+    if negativity<0.2:
         return(1,negativity)
     return tweet_analysis.social_unrest_evaluate(data_synthesized,sentiments,negativity)
 
